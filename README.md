@@ -1,7 +1,7 @@
 # plugin-fileupload
 
-Select2 3.4.1 packaged as a Servlet 3.0 plugin. With a couple of clojure/hiccup
-helpers.
+jQuery-File-Upload packaged as a Servlet 3.0 plugin. With a couple of
+clojure/hiccup helpers.
 
 
 ## Dependencies
@@ -13,18 +13,33 @@ helpers.
 ## Usage
 
 ```clojure
-> (require '[plugin-fileupload.core :as select2])
+> (require '[plugin-fileupload.core :as fileupload])
 
-> select2/css
-[:link {:href "/plugins/select2/select2.css", :rel "stylesheet"}]
+> fileupload/css
+[:link {:href "/plugins/fileupload/css/jquery.fileupload-ui.css", :rel "stylesheet"}]
 
-> select2/js
+> (fileupload/js)
+([:script {:src "/plugins/fileupload/js/jquery.fileupload.js"}])
+
+> (fileupload/js :angular true
+                 :audio true
+                 :iframe-transport true
+                 :image true
+                 :jquery true
+                 :jquery-ui true
+                 :process true
+                 :validate true
+                 :video true)
 ([:script {:src "/plugins/jquery/js/jquery.min.js"}]
- [:script {:src "/plugins/select2/select2.min.js"}])
-
-> select2/js-debug ; non-minimized version(s)
-([:script {:src "/plugins/jquery/js/jquery.js"}]
- [:script {:src "/plugins/select2/select2.js"}])
+ [:script {:src "/plugins/fileupload/js/vendor/jquery.ui.widget.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-angular.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-audio.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-iframe-transport.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-image.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-process.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-validate.js"}]
+ [:script {:src "/plugins/fileupload/js/jquery.fileupload-video.js"}])
 ```
 
 
@@ -32,4 +47,4 @@ helpers.
 
 Copyright © 2013 Andrew Mcveigh
 
-Distributed under the Apache License, Version 2.0, the same as Select2.
+Distributed under the Eclipse Public License, the same as Clojure.

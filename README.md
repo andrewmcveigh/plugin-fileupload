@@ -3,6 +3,8 @@
 jQuery-File-Upload packaged as a Servlet 3.0 plugin. With a couple of
 clojure/hiccup helpers.
 
+*This plugin: "just about works".*
+
 
 ## Dependencies
 

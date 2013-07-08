@@ -1,4 +1,4 @@
-(defproject com.andrewmcveigh/plugin-fileupload "0.1.0"
+(defproject com.andrewmcveigh/plugin-fileupload "0.1.1-SNAPSHOT"
   :description "jQuery-File-Upload packaged as a Servlet 3.0 plugin. With a
                 couple of clojure/hiccup helpers."
   :url "http://github.com/andrewmcveigh/plugin-fileupload"
